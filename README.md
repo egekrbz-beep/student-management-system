@@ -8,8 +8,7 @@ An end-to-end relational database and academic reporting pipeline built in **Pyt
 
 ---
 
-## Architecture & Workflow
-
+🏗 Architecture & Workflow
 ```text
   [ ogrenciler.csv ]
           │
@@ -43,3 +42,20 @@ student-management-system/
 ├── sorgula.py                  # Single-table lookup and filtering queries
 ├── query_join.py               # Multi-table INNER/LEFT JOIN analytical reports
 └── README.md                   # Project documentation
+
+⚙️ Key Engineering Highlights
+Modular Script Separation: Isolates CSV parsing (csv_oku.py), schema initialization (main.py), grade insertion (add_grades.py), and reporting (sorgula.py, query_join.py) into focused, single-purpose scripts.
+
+Relational Integrity: Enforces structured relationships between student profiles and course grades using SQLite primary and foreign key constraints.
+
+Automated CSV Ingestion: Parses structured flat-file records (ogrenciler.csv) with UTF-8 encoding support and maps fields directly into relational tables.
+
+Multi-Table SQL Analytics: Implements INNER JOIN and LEFT JOIN queries (query_join.py) alongside aggregate functions to generate consolidated academic performance reports.
+
+End-to-End Orchestration: Provides a unified execution entry point (pipeline_okul_projesi.py) to run schema creation, data loading, and reporting sequentially.
+
+🚀 Getting Started
+1. Prerequisites
+Python 3.9+
+
+SQLite3 (bundled with standard Python installation)
