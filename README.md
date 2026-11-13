@@ -1,6 +1,12 @@
 # Relational Student Management & Analytics System
 
-A Python and SQLite application designed to manage student records, course grades, and multi-table academic reporting using relational database principles.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-Relational_DB-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production_Ready-2EA44F?style=flat-square)
+
+An end-to-end relational database and academic reporting pipeline built in **Python** and **SQLite**. Designed to ingest student records from CSV files, maintain normalized relational schemas, and execute multi-table `JOIN` analytics queries.
+
+---
 
 ## Architecture & Workflow
 
@@ -9,12 +15,12 @@ A Python and SQLite application designed to manage student records, course grade
           │
           ▼
   ┌───────────────┐
-  │  csv_oku.py   │  ──▶ Parses raw student records from CSV
+  │  csv_oku.py   │  ──▶ Extracts & parses raw student records from CSV
   └───────┬───────┘
           │
           ▼
   ┌───────────────┐     ┌─────────────────┐
-  │    main.py    │ ──▶ │  add_grades.py  │
+  │    main.py    │ ──▶ │  add_grades.py  │  ──▶ Schema creation & grade ingestion
   └───────┬───────┘     └────────┬────────┘
           │                      │
           ▼                      ▼
